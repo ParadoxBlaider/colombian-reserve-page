@@ -76,12 +76,12 @@ const ListHotels: React.FC<ListHotelsProps> = ({ hotels, check_in, check_out }) 
         cellphone: values.phone_emergency,
       }
     }
-    console.log(data)
 
     try {
       const resp = await makeReservation(data);
       if (resp) {
         notificationAction(resp.message, 'success')
+        handleCancelModalReservation()
       }
     } catch (error: any) {
       if (error.response) {
