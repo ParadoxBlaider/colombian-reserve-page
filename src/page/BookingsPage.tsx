@@ -80,10 +80,9 @@ const BookingsPage: React.FC = () => {
       }
     }
   };
-
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    getBanners();// eslint-disable-next-line react-hooks/exhaustive-deps
+    getBanners();
     return () => {
     };
   }, [])
