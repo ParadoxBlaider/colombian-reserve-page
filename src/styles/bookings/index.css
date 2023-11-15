@@ -1,0 +1,12 @@
+.container-bookings .container-bookings__form label::before, .modal-reservation__form label::before{
+  @apply !content-none
+}
+.container-bookings .container-bookings__form label, .modal-reservation__form{
+  @apply font-bold
+}
+.container-bookings .container-bookings__hotels > .ant-card > .ant-card-body{
+  @apply !p-0
+}
+.modal-reservation__main_action{
+  @apply !bg-smart-talent
+}

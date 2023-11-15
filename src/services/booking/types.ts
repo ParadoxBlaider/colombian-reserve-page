@@ -1,33 +1,12 @@
 
 
-export interface DataBookings {
+export interface Banners {
   id: number;
-  hotel_id: number;
-  room_id: number;
-  hotel: Hotels;
-  room: Rooms;
-  check_in_date: string;
-  check_out_date: string;
-  quatity_people: number;
-  status: boolean;
-  guests: Guests[];
-  emergency_contact: EmergencyContact;
+  url: string;
 }
-
-export interface Guests {
+export interface Cities {
+  id: number;
   name: string;
-  last_name: string;
-  birthdate: string;
-  genre: string;
-  type_document: string;
-  document_number: string;
-  email: string;
-  cellphone: string;
-}
-export interface EmergencyContact {
-  name: string;
-  last_name: string;
-  cellphone: string;
 }
 
 export interface Hotels {
@@ -42,7 +21,6 @@ export interface Hotels {
 
 export type Rooms = {
   id: number;
-  key?: string;
   hotel: {
     id: number,
     name: string
@@ -54,4 +32,6 @@ export type Rooms = {
   tax: number;
   max_people: number;
   status: boolean;
+  dates_reservations:string[]
 }
+
