@@ -29,6 +29,7 @@ const BookingsPage: React.FC = () => {
       const data = await getBannersHotels();
       if (data) {
         setBanners(data)
+        getCities()
       }
     } catch (error: any) {
       if (error.response) {
@@ -81,13 +82,10 @@ const BookingsPage: React.FC = () => {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      await getBanners();
-      await getCities();
+    getBanners(); // eslint-disable-next-line react-hooks/exhaustive-deps
+    return () => {
     };
-    
-    fetchData();
-  }, []);
+  }, [])
 
   return (
 
