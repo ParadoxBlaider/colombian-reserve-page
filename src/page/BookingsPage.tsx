@@ -85,9 +85,9 @@ const BookingsPage: React.FC = () => {
       await getBanners();
       await getCities();
     };
-  
+    
     fetchData();
-  }, [getBanners, getCities]);
+  }, []);
 
   return (
 
